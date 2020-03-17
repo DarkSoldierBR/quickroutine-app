@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "254608564340",
+    "firebase_url": "https://quick-routine-tcc.firebaseio.com",
+    "project_id": "quick-routine-tcc",
+    "storage_bucket": "quick-routine-tcc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:254608564340:android:d62af60da42616c9c73121",
+        "android_client_info": {
+          "package_name": "br.com.quick_routine"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "254608564340-jko5j64le1ihllb1s8adlj15jtd6a51p.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "br.com.quick_routine",
+            "certificate_hash": "c69a43d2323770efd2b16c880b84399f21c9b4a2"
+          }
+        },
+        {
+          "client_id": "254608564340-t34plqi68t7s9aucljah0evsjiudc0pk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA35Xznx1GCXpdLVxGffq2PX6eZmeEUc1I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "254608564340-t34plqi68t7s9aucljah0evsjiudc0pk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
