@@ -16,20 +16,20 @@ class Intro extends StatefulWidget {
 
 class _IntroState extends State<Intro> {
   var pages = [
-    Container(
-      color: Colors.blue,
-    ),
-
-    buildContainer("Titulo", Colors.blueAccent, "Descricao dessa pagina",
+   
+    buildContainer("Titulo", Colors.blueAccent, "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et blandit tellus. In ac ex tellus. Nam euismod lacinia velit id mollis. Etiam fermentum dolor erat, vel feugiat sem pellentesque non. Quisque ut tellus iaculis, tristique nunc id, varius libero. Maecenas aliquet enim lacus, a iaculis quam consectetur eu. Donec porttitor vestibulum mauris ac varius. Duis rhoncus, dui id tempor viverra, arcu arcu imperdiet eros, quis semper massa ex eget nibh. Duis ante nisi, dignissim nec nunc a, faucibus dapibus tellus. Mauris vitae porta ligula. ",
+        "https://raw.githubusercontent.com/Quick-Routine/quick-rotine-design/master/Logos/logo-vertical.png"),
+    buildContainer("Titulo2", Colors.yellow, "Descricao dessa pagina",
         "https://flutter.dev/assets/flutter-lockup-c13da9c9303e26b8d5fc208d2a1fa20c1ef47eb021ecadf27046dea04c0cebf6.png"),
-    Container(
-      color: Colors.black,
-    ),
-//buildContainer()
+    buildContainer("Titul3", Colors.greenAccent, "Descricao dessa pagina",
+        "https://flutter.dev/assets/flutter-lockup-c13da9c9303e26b8d5fc208d2a1fa20c1ef47eb021ecadf27046dea04c0cebf6.png"),
+   
+    
   ];
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: buildPageView(context, pages));
+    return Scaffold(
+      body: buildPageView(context, pages));
   }
 }
