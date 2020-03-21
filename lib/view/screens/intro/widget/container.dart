@@ -5,7 +5,7 @@ Widget buildContainer(String texto, Color color, String desc, String image) {
   return SafeArea(
       child: Container(
           padding: EdgeInsets.all(30),
-          color: Colors.red,
+          color: color,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -15,19 +15,18 @@ Widget buildContainer(String texto, Color color, String desc, String image) {
               ),
               Text(
                 texto,
-                style: TextStyle(),
+                style: TextStyle(fontSize: 40),
               ),
               Spacer(
                 flex: 3,
               ),
-              Image.network(
-                image,
-              ),
+              Image.asset(image),
               Spacer(
                 flex: 2,
               ),
               Text(
                 desc,
+                style: TextStyle(fontSize: 20),
               ),
               Spacer(
                 flex: 10,
