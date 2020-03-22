@@ -31,13 +31,7 @@ Widget buildContainer(String texto, Color color, String desc, String image) {
               Spacer(
                 flex: 10,
               ),
-              FloatingActionButton(
-                onPressed: null,
-                child: Icon(Icons.arrow_right),
-              ),
-              Spacer(
-                flex: 3,
-              ),
+              
             ],
           )));
 }

@@ -35,6 +35,13 @@ class _IntroState extends State<Intro> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: buildPageView(context, pages));
+    return Scaffold(
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+        floatingActionButton:
+      
+           FloatingActionButton.extended(
+             splashColor: Colors.purpleAccent,
+             backgroundColor: Colors.red, onPressed: null,label: Text("Next"),icon: Icon(Icons.arrow_forward_ios),),
+        body: buildPageView(context, pages));
   }
 }
