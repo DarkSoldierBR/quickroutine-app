@@ -25,7 +25,9 @@ dependencies:
   cupertino_icons: ^0.1.2
   path_provider: ^1.5.1
   provider: 
-
+  mobx: ^1.1.0
+  flutter_mobx: ^1.1.0
+  
 dev_dependencies:
   flutter_test:
     sdk: flutter
