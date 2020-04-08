@@ -127,7 +127,7 @@ class _HomeState extends State<Home> {
                       color: Color.fromRGBO(128, 128, 128, 1.0),
                       alignment: Alignment.center,
                       child: Text(
-                        "Tarefas/Atividades/afazeres",
+                        "Tarefas",
                         style: TextStyle(
                             fontSize: 30.0,
                             color: Color.fromRGBO(220, 220, 220, 1.0),
