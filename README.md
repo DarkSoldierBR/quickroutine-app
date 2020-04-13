@@ -1,3 +1,3 @@
 # quick_routine
 
-https://travis-ci.com/Quick-Routine/quick-routine-app.svg?branch=master
+[![Build Status](https://travis-ci.com/Quick-Routine/quick-routine-app.svg?branch=master)](https://travis-ci.com/Quick-Routine/quick-routine-app)
