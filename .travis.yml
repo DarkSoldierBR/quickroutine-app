@@ -1,3 +1,4 @@
 language: dart
 
-before_script: flutter doctor -v
+script: 
+- flutter doctor -v
