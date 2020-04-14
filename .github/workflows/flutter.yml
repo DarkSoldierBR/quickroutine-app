@@ -13,7 +13,7 @@ jobs:
       with:
           flutter-version: '1.12.x' # you can use 1.12
           channel: 'stable' # optional, default to: 'stable'
-    - run: flutter pub get
+    - run: flutter pub get -v
 
   build:
     # The type of runner that the job will run on
@@ -28,4 +28,4 @@ jobs:
       with:
         flutter-version: '1.12.x' # you can use 1.12
         channel: 'stable' # optional, default to: 'stable'
-    - run: flutter build apk
+    - run: flutter build apk -v
