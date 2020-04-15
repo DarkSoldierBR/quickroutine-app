@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:quick_routine/view/common/appbar.dart';
+import 'package:quick_routine/view/common/drawer.dart';
 
 class Config extends StatefulWidget {
   @override
@@ -8,21 +10,21 @@ class Config extends StatefulWidget {
 class _ConfigState extends State<Config> {
   @override
   Widget build(BuildContext context) {
-    return Material(
-      child:
-      Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: <Widget>[
-        Container(
-          
-         child: RaisedButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          child: Text('Go back!'),
-        ),
-        )
-      ],
-    ));
+    return Scaffold(
+        drawer: buildDrawer(context),
+        appBar: buildAppBar(context),
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Container(
+              child: RaisedButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                child: Text('Go back!'),
+              ),
+            )
+          ],
+        ));
   }
 }
