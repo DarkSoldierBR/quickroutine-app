@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:quick_routine/view/screens/config/config.dart';
 import 'package:quick_routine/view/screens/home/home.dart';
+import 'package:quick_routine/view/screens/rotine/rotine.dart';
+import 'package:quick_routine/view/screens/task/task.dart';
 
 Widget buildDrawer(context) {
   return Drawer(
@@ -20,7 +22,6 @@ Widget buildDrawer(context) {
             )),
         Container(
             height: 700,
-
             //height: 700,
             color: Color.fromRGBO(128, 128, 128, 1.0),
             child: Column(
@@ -39,12 +40,24 @@ Widget buildDrawer(context) {
                   ),
                 ),
                 ListTile(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Rotine()),
+                    );
+                  },
                   title: Text(
                     'Rotinas',
                     style: TextStyle(fontSize: 25),
                   ),
                 ),
                 ListTile(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Task()),
+                    );
+                  },
                   title: Text(
                     'Tarefas',
                     style: TextStyle(fontSize: 25),

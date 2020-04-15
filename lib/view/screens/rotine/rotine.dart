@@ -2,21 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:quick_routine/view/common/appbar.dart';
 import 'package:quick_routine/view/common/drawer.dart';
 
-class Config extends StatefulWidget {
+class Rotine extends StatefulWidget {
   @override
-  _ConfigState createState() => _ConfigState();
+  _RotineState createState() => _RotineState();
 }
 
-class _ConfigState extends State<Config> {
+class _RotineState extends State<Rotine> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         drawer: buildDrawer(context),
         appBar: buildAppBar(context),
         body: Container(
-          color: Colors.blueAccent,
+          color: Colors.deepPurpleAccent,
           child: Center(
-            child: Text("Configurações"),
+            child: Text("Rotina"),
           ),
         ));
   }
