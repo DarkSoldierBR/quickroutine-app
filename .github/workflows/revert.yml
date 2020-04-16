@@ -14,6 +14,6 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Automatic Revert
-        uses: srt32/revert@v0.0.1
+        uses: sandesh2026/revert@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
