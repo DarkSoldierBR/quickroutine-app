@@ -6,23 +6,18 @@ import 'package:quick_routine/view/screens/task/task.dart';
 
 Widget buildDrawer(context) {
   return Drawer(
-    // Add a ListView to the drawer. This ensures the user can scroll
-    // through the options in the drawer if there isn't enough vertical
-    // space to fit everything.
-
     child: ListView(
       padding: EdgeInsets.zero,
       children: <Widget>[
-        DrawerHeader(
-            decoration: BoxDecoration(
-              color: Color.fromRGBO(192, 192, 192, 1.0),
-            ),
-            child: Center(
-              child: Image.asset("assets/logo/logo-horizontal.png"),
-            )),
+        SafeArea(
+            child: Container(
+                padding: EdgeInsets.all(40),
+                color: Color.fromRGBO(192, 192, 192, 1.0),
+                child: Center(
+                  child: Image.asset("assets/logo/logo-horizontal.png"),
+                ))),
         Container(
             height: 700,
-            //height: 700,
             color: Color.fromRGBO(128, 128, 128, 1.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
