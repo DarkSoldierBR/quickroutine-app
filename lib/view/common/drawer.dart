@@ -6,8 +6,7 @@ import 'package:quick_routine/view/screens/task/task.dart';
 
 Widget buildDrawer(context) {
   return Drawer(
-    child: ListView(
-      padding: EdgeInsets.zero,
+    child: Column(
       children: <Widget>[
         SafeArea(
             child: Container(
@@ -16,12 +15,16 @@ Widget buildDrawer(context) {
                 child: Center(
                   child: Image.asset("assets/logo/logo-horizontal.png"),
                 ))),
+         Expanded(child:     
         Container(
-            height: 700,
+            
             color: Color.fromRGBO(128, 128, 128, 1.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
+
+                // Lista de Opções:
+                
                 ListTile(
                   onTap: () {
                     Navigator.push(
@@ -77,7 +80,7 @@ Widget buildDrawer(context) {
                   ),
                 )
               ],
-            ))
+            )))
       ],
     ),
   );
