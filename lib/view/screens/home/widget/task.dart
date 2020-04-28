@@ -13,7 +13,7 @@ Widget buildTask(String date,String titulo) {
             children: <Widget>[
               Text(
                 date,
-                style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
+                style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold,fontFamily: 'Montserrat'),
               ),
               Container(
                   width: 350,
@@ -21,6 +21,7 @@ Widget buildTask(String date,String titulo) {
                     child: Text(
                       titulo,
                       style: TextStyle(
+                        fontFamily: 'Montserrat',
                           fontSize: 24,
                           color: Color.fromRGBO(220, 220, 220, 1.0)),
                     ),

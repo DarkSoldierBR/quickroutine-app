@@ -31,7 +31,8 @@ class _HomeState extends State<Home> {
                     child: Text(
                       "Segunda-feira (30/03/2003)",
                       style: TextStyle(
-                          fontSize: 30.0, fontWeight: FontWeight.bold),
+                       fontFamily: 'Montserrat',
+                          fontSize: 28.0, fontWeight: FontWeight.bold),
                     ),
                   )),
               SizedBox(
@@ -43,6 +44,7 @@ class _HomeState extends State<Home> {
                       child: Text(
                         "Tarefas",
                         style: TextStyle(
+                           fontFamily: 'Montserrat',
                             fontSize: 30.0,
                             color: Color.fromRGBO(220, 220, 220, 1.0),
                             fontWeight: FontWeight.bold),
