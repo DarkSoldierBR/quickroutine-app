@@ -29,10 +29,10 @@ class _HomeState extends State<Home> {
                     height: 60,
                     alignment: Alignment.center,
                     child: Text(
-                      "Segunda-feira (30/03/2003)",
+                      "Segunda-feira",
                       style: TextStyle(
                           fontFamily: 'Montserrat',
-                          fontSize: 28.0,
+                          fontSize: 25.0,
                           fontWeight: FontWeight.bold),
                     ),
                   )),
