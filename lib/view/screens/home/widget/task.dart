@@ -23,9 +23,9 @@ Widget buildTask(String date, String titulo) {
                   width: 200,
                   child: Center(
                     child: Text(
-                      titulo, //O campo titulo deve conter no maximo 15 caracteres  
+                      titulo, //O campo titulo deve conter no maximo 15 caracteres
                       style: TextStyle(
-                          fontFamily: 'Montserrat',
+                          fontFamily: 'Montserrat-Relular',
                           fontSize: 24,
                           color: Color.fromRGBO(220, 220, 220, 1.0)),
                     ),
