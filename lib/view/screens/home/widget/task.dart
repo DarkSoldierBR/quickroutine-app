@@ -5,11 +5,10 @@ Widget buildTask(String date, String titulo) {
       width: double.infinity,
       child: Container(
           decoration: BoxDecoration(
-              border: Border.all(width: 3.0),
-              borderRadius: BorderRadius.all(Radius.circular(25.0)), // <--- border radius aqui
+              borderRadius: BorderRadius.all(
+                  Radius.circular(25.0)), // <--- border radius aqui
               color: Color.fromRGBO(255, 127, 16, 1.0)), //laranja forte
           height: 60,
-          padding: EdgeInsets.all(5),
           margin: EdgeInsets.fromLTRB(5, 0, 5, 0),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,

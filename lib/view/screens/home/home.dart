@@ -32,7 +32,7 @@ class _HomeState extends State<Home> {
                       "Segunda-feira",
                       style: TextStyle(
                           fontFamily: 'Montserrat',
-                          fontSize: 25.0,
+                          fontSize: 30,
                           fontWeight: FontWeight.bold),
                     ),
                   )),
@@ -56,25 +56,23 @@ class _HomeState extends State<Home> {
                     border: Border.all(width: 3.0,color: Colors.blueAccent),
                     borderRadius: BorderRadius.all(
                       Radius.circular(25),
-                    ),
-                    //  color: Color.fromRGBO(128, 128, 128, 1) //cinza forte
-                   // color: 
+                    ),     
                   ),
-                //color: Colors.red,
+                  margin: EdgeInsets.only(left:10,right:10),
+
 
                 child: Column(
                   children: <Widget>[
                     Container(
                       width: 150,
-                        margin: EdgeInsets.all(5),
-                        padding: EdgeInsets.all(7),
+                      height: 50,          
                         color: Color.fromRGBO(128, 128, 128, 1.0),
                         alignment: Alignment.center,
                         child: Text(
                           "Tarefas",
                           style: TextStyle(
                               fontFamily: 'Montserrat',
-                              fontSize: 30.0,
+                              fontSize: 25.0,
                               color: Color.fromRGBO(220, 220, 220, 1.0),
                               fontWeight: FontWeight.bold),
                         )),
