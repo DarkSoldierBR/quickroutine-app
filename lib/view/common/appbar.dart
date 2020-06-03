@@ -4,7 +4,6 @@ Widget buildAppBar(context) {
   return AppBar(
     leading: Builder(builder: (BuildContext context) {
       return Container(
-          color: Colors.blue,
           child: IconButton(
               icon: new Image.asset("assets/logo/menu-icone.png"),
               iconSize: 50.0,
@@ -13,7 +12,6 @@ Widget buildAppBar(context) {
               }));
     }),
     title: Container(
-        color: Colors.red,
         width: double.infinity,
         child: Row(
           verticalDirection: VerticalDirection.down,
