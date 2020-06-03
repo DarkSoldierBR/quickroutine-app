@@ -18,11 +18,11 @@ class _HomeState extends State<Home> {
         body: Container(
           alignment: Alignment.bottomCenter,
           color: Color.fromRGBO(220, 220, 220, 1.0),
-          child: Column(           
+          child: Column(
             children: <Widget>[
               SizedBox(
-                  width: double.infinity,                
-                  child: Container(                
+                  width: double.infinity,
+                  child: Container(
                     height: 60,
                     alignment: Alignment.center,
                     child: Text(
@@ -41,7 +41,7 @@ class _HomeState extends State<Home> {
               //       borderRadius: BorderRadius.all(
               //         Radius.circular(25),
               //       ),
-              //       //  color: Color.fromRGBO(128, 128, 128, 1) //cinza 
+              //       //  color: Color.fromRGBO(128, 128, 128, 1) //cinza
               //       color: Colors.deepPurpleAccent,
               //     ),
               //     margin: EdgeInsets.all(5),
@@ -49,40 +49,45 @@ class _HomeState extends State<Home> {
               //     child:
 
               Container(
-                  decoration: BoxDecoration(
-                    border: Border.all(width: 5.0,color: Color.fromRGBO(128, 128, 128, 1) ), //cinza 
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(25),
-                    ),     
+                height: 390,
+                decoration: BoxDecoration(
+                  border: Border.all(
+                      width: 5.0,
+                      color: Color.fromRGBO(128, 128, 128, 1)), //cinza
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(25),
                   ),
-                  margin: EdgeInsets.only(left:10,right:10),
-
-
+                ),
+                margin: EdgeInsets.only(left: 10, right: 10),
                 child: Column(
                   children: <Widget>[
                     Container(
-                      width: 150,
-                      height: 50,          
-                       // color: Color.fromRGBO(128, 128, 128, 1.0),
+                        width: 350,
+                        height: 50,
+                        // color: Color.fromRGBO(128, 128, 128, 1.0),
                         alignment: Alignment.center,
                         child: Text(
                           "Tarefas",
                           style: TextStyle(
                               fontFamily: 'Montserrat',
                               fontSize: 25.0,
-                              color: Color.fromRGBO(79, 79, 79, 1.0), //cinza forte
+                              color:
+                                  Color.fromRGBO(79, 79, 79, 1.0), //cinza forte
                               fontWeight: FontWeight.bold),
                         )),
                     Container(
-                      padding: EdgeInsets.all(5),
-                      color: Colors.greenAccent,
+                        padding: EdgeInsets.all(5),
+                        color: Colors.greenAccent,
                         child: Column(
-                      children: <Widget>[
-                        buildTask("9:00", "Acordar"),
-                        buildTask("22:00", "Dormir"),
-                        buildTask("13:00", "Estudar"),
-                      ],
-                    ))
+                          children: <Widget>[
+                            buildTask("9:00", "Acordar"),
+                            buildTask("10:00", "Estudar"),
+                            buildTask("12:00", "Almoçar"),
+                            buildTask("12:30", "Dormir"),
+                            buildTask("13:00", "Acordar"),
+                           // buildTask("13:10", "Estudar"),
+                          ],
+                        ))
                   ],
                 ),
               ),
