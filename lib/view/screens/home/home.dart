@@ -48,7 +48,7 @@ class _HomeState extends State<Home> {
                   children: <Widget>[
                     Container(
                         width: 350,
-                        height: 50,
+                        height: 40,
                         alignment: Alignment.center,
                         child: Text(
                           "Tarefas",
@@ -60,8 +60,7 @@ class _HomeState extends State<Home> {
                               fontWeight: FontWeight.bold),
                         )),
                     Container(
-                        height: 330,
-                        padding: EdgeInsets.all(5),
+                        height: 340,
                         child: ListView(
                           children: <Widget>[
                             buildTask("9:00", "Acordar"),
