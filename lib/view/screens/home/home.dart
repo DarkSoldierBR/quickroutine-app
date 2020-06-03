@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:quick_routine/view/common/appbar.dart';
 import 'package:quick_routine/view/common/drawer.dart';
+import 'package:quick_routine/view/common/bottombar.dart';
 import 'package:quick_routine/view/screens/home/widget/task.dart';
 
 class Home extends StatefulWidget {
@@ -15,9 +16,10 @@ class _HomeState extends State<Home> {
         backgroundColor: Colors.black,
         drawer: buildDrawer(context),
         appBar: buildAppBar(context),
+        bottomNavigationBar: buildBottomBar(context),
         body: Container(
           alignment: Alignment.bottomCenter,
-          color: Color.fromRGBO(220, 220, 220, 1.0),
+          color: Color.fromRGBO(220, 220, 220, 1.0), //cinza fraco background
           child: Column(
             children: <Widget>[
               SizedBox(

@@ -5,7 +5,7 @@ Widget buildAppBar(context) {
     leading: Builder(builder: (BuildContext context) {
       return Container(
           child: IconButton(
-              icon: new Image.asset("assets/logo/menu-icone.png"),
+              icon: new Image.asset("assets/icones/menu-icone.png"),
               iconSize: 50.0,
               onPressed: () {
                 Scaffold.of(context).openDrawer();
