@@ -1,11 +1,18 @@
 import 'package:flutter/material.dart';
 
 Widget buildTask(String date, String titulo) {
-  return SizedBox(
-      width: double.infinity,
-      child: Container(
+  return 
+      // SizedBox(
+      // width: double.infinity,
+      // child:
+      
+       Container(
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.all(
+                  Radius.circular(25.0)), // <--- border radius aqui
+              color: Color.fromRGBO(255, 127, 16, 1.0)), //laranja forte
           height: 60,
-          color: Color.fromRGBO(255, 127, 16, 1.0),
+          margin: EdgeInsets.fromLTRB(5, 0, 5, 0),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: <Widget>[
@@ -31,5 +38,5 @@ Widget buildTask(String date, String titulo) {
                     ),
                   ))
             ],
-          )));
+          ));
 }
