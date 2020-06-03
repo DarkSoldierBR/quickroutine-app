@@ -57,6 +57,7 @@ class _HomeState extends State<Home> {
                   borderRadius: BorderRadius.all(
                     Radius.circular(25),
                   ),
+             //     color: Colors.brown     //marrom
                 ),
                 margin: EdgeInsets.only(left: 10, right: 10),
                 child: Column(
@@ -64,7 +65,7 @@ class _HomeState extends State<Home> {
                     Container(
                         width: 350,
                         height: 50,
-                        // color: Color.fromRGBO(128, 128, 128, 1.0),
+                  //       color: Color.fromRGBO(128, 128, 128, 1.0),  //cinza
                         alignment: Alignment.center,
                         child: Text(
                           "Tarefas",
@@ -76,17 +77,45 @@ class _HomeState extends State<Home> {
                               fontWeight: FontWeight.bold),
                         )),
                     Container(
+                      height: 330,
                         padding: EdgeInsets.all(5),
-                        color: Colors.greenAccent,
-                        child: Column(
+                        color: Colors.greenAccent,  //verde
+                        child: 
+                        ListView(
+
+
+
+
                           children: <Widget>[
-                            buildTask("9:00", "Acordar"),
+                          buildTask("9:00", "Acordar"),
                             buildTask("10:00", "Estudar"),
                             buildTask("12:00", "Almoçar"),
+                              buildTask("12:00", "Almoçar"),
                             buildTask("12:30", "Dormir"),
                             buildTask("13:00", "Acordar"),
-                           // buildTask("13:10", "Estudar"),
+                            buildTask("13:10", "Estudar"),
+                         
+                                              
+
+
+
                           ],
+                      //  shrinkWrap: true,
+                      //   //  physics: const ScrollPhysics(),
+                      //   //               scrollDirection: Axis.vertical,        
+                      //              reverse: true,        
+                      //     children: <Widget>[
+                      //       buildTask("9:00", "Acordar"),
+                      //       buildTask("10:00", "Estudar"),
+                      //       buildTask("12:00", "Almoçar"),
+                      //         buildTask("12:00", "Almoçar"),
+                      //       buildTask("12:30", "Dormir"),
+                      //       buildTask("13:00", "Acordar"),
+                      //       buildTask("13:10", "Estudar"),
+                      //       buildTask("12:30", "Dormir"),
+                      //       buildTask("13:00", "Acordar"),
+                      //       buildTask("13:10", "Estudar"),
+                          
                         ))
                   ],
                 ),

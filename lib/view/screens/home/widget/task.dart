@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 
 Widget buildTask(String date, String titulo) {
-  return SizedBox(
-      width: double.infinity,
-      child: Container(
+  return 
+      // SizedBox(
+      // width: double.infinity,
+      // child:
+      
+       Container(
           decoration: BoxDecoration(
               borderRadius: BorderRadius.all(
                   Radius.circular(25.0)), // <--- border radius aqui
@@ -35,5 +38,5 @@ Widget buildTask(String date, String titulo) {
                     ),
                   ))
             ],
-          )));
+          ));
 }
