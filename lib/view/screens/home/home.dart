@@ -35,8 +35,8 @@ class _HomeState extends State<Home> {
                           fontWeight: FontWeight.bold),
                     ),
                   )),
-              Container(
-                height: 390,
+              Expanded(
+                  child: Container(
                 decoration: BoxDecoration(
                   border: Border.all(
                       width: 5.0,
@@ -45,7 +45,7 @@ class _HomeState extends State<Home> {
                     Radius.circular(25),
                   ),
                 ),
-                margin: EdgeInsets.only(left: 10, right: 10),
+                margin: EdgeInsets.only(left: 10, right: 10, bottom: 10),
                 child: Column(
                   children: <Widget>[
                     Container(
@@ -61,22 +61,36 @@ class _HomeState extends State<Home> {
                                   Color.fromRGBO(79, 79, 79, 1.0), //cinza forte
                               fontWeight: FontWeight.bold),
                         )),
-                    Container(
-                        height: 340,
-                        child: ListView(
-                          children: <Widget>[
-                            buildTask("9:00", "Acordar"),
-                            buildTask("10:00", "Estudar"),
-                            buildTask("12:00", "Almoçar"),
-                            buildTask("12:00", "Almoçar"),
-                            buildTask("12:30", "Dormir"),
-                            buildTask("13:00", "Acordar"),
-                            buildTask("13:10", "Estudar"),
-                          ],
-                        ))
+                    Expanded(
+                        child: Container(
+                            height: 340,
+                            child: ListView(
+                              children: <Widget>[
+                                buildTask("9:00", "Acordar"),
+                                buildTask("10:00", "Estudar"),
+                                buildTask("11:00", "Almoçar"),
+                                buildTask("12:00", "Almoçar"),
+                                buildTask("13:30", "Dormir"),
+                                buildTask("14:00", "Acordar"),
+                                buildTask("15:10", "Estudar"),
+                                buildTask("16:30", "Dormir"),
+                                buildTask("17:00", "Acordar"),
+                                buildTask("18:10", "Estudar"),
+                                buildTask("9:00", "Acordar"),
+                                buildTask("10:00", "Estudar"),
+                                buildTask("11:00", "Almoçar"),
+                                buildTask("12:00", "Almoçar"),
+                                buildTask("13:30", "Dormir"),
+                                buildTask("14:00", "Acordar"),
+                                buildTask("15:10", "Estudar"),
+                                buildTask("16:30", "Dormir"),
+                                buildTask("17:00", "Acordar"),
+                                buildTask("18:10", "Estudar"),
+                              ],
+                            )))
                   ],
                 ),
-              ),
+              )),
             ],
           ),
         ));
