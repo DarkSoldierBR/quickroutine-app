@@ -45,7 +45,7 @@ class _HomeState extends State<Home> {
                     Radius.circular(25),
                   ),
                 ),
-                margin: EdgeInsets.only(left: 10, right: 10, bottom: 10),
+                margin: EdgeInsets.only(left: 10, right: 10),
                 child: Column(
                   children: <Widget>[
                     Container(
