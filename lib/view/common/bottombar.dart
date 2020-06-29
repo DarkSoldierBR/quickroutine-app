@@ -11,6 +11,6 @@ Widget buildBottomBar(context) {
               children: <Widget>[
                 Container(child: Image.asset("assets/icones/search.png")),
                 Container(child: Image.asset("assets/icones/home.png")),
-                Container(child: Image.asset("assets/icones/settings.png")),
+               // Container(child: Image.asset("assets/icones/settings.png")),
               ])));
 }
