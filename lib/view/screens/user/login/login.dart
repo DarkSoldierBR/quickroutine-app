@@ -14,23 +14,21 @@ class _LoginState extends State<Login> {
     return Scaffold(
         backgroundColor: Color.fromRGBO(234, 234, 234, 1),
         body: Container(
-      alignment: Alignment.bottomCenter,
-      child: SafeArea(
-        child: Column(
-          // margin: EdgeInsets.only(top: 80),
-
-          // child: Column(
-          children: <Widget>[
-            Container(
-                margin: EdgeInsets.all(10),
-                color: Colors.red,
-                child: Image.asset('assets/logo/logo-vertical.png')),
-            buildTextField('Nome'),
-            buildTextField('Email'),
-            buildTextField('Senha'),
-          ],
-        ),
-      ),
-    ));
+            child: SafeArea(
+          child: SingleChildScrollView(
+            padding: EdgeInsets.symmetric(horizontal: 5.0, vertical: 3.0),
+            child: Column(
+              children: <Widget>[
+                Container(
+                    margin: EdgeInsets.all(10),
+                    color: Colors.red,
+                    child: Image.asset('assets/logo/logo-vertical.png')),
+                buildTextField('Nome'),
+                buildTextField('Email'),
+                buildTextField('Senha'),
+              ],
+            ),
+          ),
+        )));
   }
 }
