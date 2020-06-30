@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-
-import "package:flutter/material.dart";
 import 'package:quick_routine/view/screens/user/login/widget/textfield.dart';
 
 class Login extends StatefulWidget {
