@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:quick_routine/view/common/appbar.dart';
 import 'package:quick_routine/view/common/drawer.dart';
 import 'package:quick_routine/view/common/bottombar.dart';
+import 'package:quick_routine/view/screens/home/store/counter.dart';
 import 'package:quick_routine/view/screens/home/widget/task.dart';
 
 class Home extends StatefulWidget {
@@ -11,6 +13,8 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   @override
+  final Counter counter = new Counter();
+
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Colors.black,
@@ -62,32 +66,59 @@ class _HomeState extends State<Home> {
                               fontWeight: FontWeight.bold),
                         )),
                     Expanded(
-                        child: Container(
-                            height: 340,
-                            child: ListView(
-                              children: <Widget>[
-                                buildTask("9:00", "Acordar"),
-                                buildTask("10:00", "Estudar"),
-                                buildTask("11:00", "Almoçar"),
-                                buildTask("12:00", "Almoçar"),
-                                buildTask("13:30", "Dormir"),
-                                buildTask("14:00", "Acordar"),
-                                buildTask("15:10", "Estudar"),
-                                buildTask("16:30", "Dormir"),
-                                buildTask("17:00", "Acordar"),
-                                buildTask("18:10", "Estudar"),
-                                buildTask("9:00", "Acordar"),
-                                buildTask("10:00", "Estudar"),
-                                buildTask("11:00", "Almoçar"),
-                                buildTask("12:00", "Almoçar"),
-                                buildTask("13:30", "Dormir"),
-                                buildTask("14:00", "Acordar"),
-                                buildTask("15:10", "Estudar"),
-                                buildTask("16:30", "Dormir"),
-                                buildTask("17:00", "Acordar"),
-                                buildTask("18:10", "Estudar"),
-                              ],
-                            )))
+                        child: Observer(
+                            builder: (_) => ListView.builder(
+                                padding: const EdgeInsets.all(8),
+                                itemCount: counter?.entries?.length ?? 0,
+                                itemBuilder: (BuildContext context, int index) {
+                                  return Container(
+                                      decoration: BoxDecoration(
+                                          boxShadow: [
+                                            BoxShadow(blurRadius: 10.0)
+                                          ],
+                                          borderRadius: BorderRadius.all(
+                                              Radius.circular(
+                                                  25.0)), // <--- border radius aqui
+                                          color: Color.fromRGBO(255, 127, 16,
+                                              1.0)), //laranja forte
+                                      height: 55, //altura do widget
+                                      margin: EdgeInsets.fromLTRB(
+                                          5, 0, 5, 0), // Margem do widget
+                                      child: Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceAround,
+                                        children: <Widget>[
+                                          Container(
+                                              width: 100,
+                                              child: Center(
+                                                  child: Text(
+                                                counter.date[index],
+                                                style: TextStyle(
+                                                    fontSize: 26,
+                                                    fontWeight: FontWeight.bold,
+                                                    fontFamily: 'Montserrat'),
+                                              ))),
+                                          Container(
+                                              width: 200,
+                                              child: Center(
+                                                child: Text(
+                                                  counter.title[
+                                                      index], //O campo titulo deve conter no maximo 15 caracteres
+                                                  style: TextStyle(
+                                                      fontFamily:
+                                                          'Montserrat-Relular',
+                                                      fontSize: 24,
+                                                      color: Color.fromRGBO(
+                                                          220, 220, 220, 1.0)),
+                                                ),
+                                              )),
+                                              
+                                        ],
+                                      ));
+                                }))),
+                  
+                  FloatingActionButton(
+                      onPressed: counter.increment, child: Icon(Icons.add))
                   ],
                 ),
               )),

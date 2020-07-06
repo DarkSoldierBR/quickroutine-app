@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:quick_routine/view/screens/home/widget/task.dart';
+import 'package:quick_routine/view/screens/home/store/counter.dart';
 
+
+  final Counter counter = new Counter();
+  
 Widget buildBottomBar(context) {
   return BottomAppBar(
       color: Color.fromRGBO(220, 220, 220, 1.0), //cinza fraco background
@@ -14,9 +17,7 @@ Widget buildBottomBar(context) {
                   color: Colors.blue,
                     child: IconButton(
                   icon: Image.asset("assets/icones/search.png"),
-                  onPressed: () {
-                    return buildTask("10:00", "Estudar");
-                  },
+                  onPressed: counter.increment
                 )),
                 Container(child: Image.asset("assets/icones/home.png")),
                 // Container(child: Image.asset("assets/icones/settings.png")),
