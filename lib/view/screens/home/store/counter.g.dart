@@ -27,13 +27,13 @@ mixin _$Counter on _Counter, Store {
   final _$colorCodesAtom = Atom(name: '_Counter.colorCodes');
 
   @override
-  ObservableList<int> get colorCodes {
+  ObservableList<Color> get colorCodes {
     _$colorCodesAtom.reportRead();
     return super.colorCodes;
   }
 
   @override
-  set colorCodes(ObservableList<int> value) {
+  set colorCodes(ObservableList<Color> value) {
     _$colorCodesAtom.reportWrite(value, super.colorCodes, () {
       super.colorCodes = value;
     });

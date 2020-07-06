@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:mobx/mobx.dart';
 part 'counter.g.dart';
 
@@ -10,7 +11,7 @@ abstract class _Counter with Store {
   ObservableList<String> entries = ObservableList();
 
   @observable
-  ObservableList<int> colorCodes = ObservableList();
+  ObservableList<Color> colorCodes = ObservableList();
 
   @observable
   ObservableList<String> title = ObservableList();
@@ -24,9 +25,9 @@ abstract class _Counter with Store {
     entries.add(i.toString());
 
     if (entries.length.isOdd)
-      colorCodes.add(400);
+      colorCodes.add(Color.fromRGBO(255, 127, 16, 1));
     else {
-      colorCodes.add(200);
+      colorCodes.add(Color.fromRGBO(255, 140, 0, 1));
     }
     print('click');
     title.add('Tarefa: '+i.toString());
