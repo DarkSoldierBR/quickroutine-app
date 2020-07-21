@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:quick_routine/view/screens/home/store/counter.dart';
+import 'package:quick_routine/view/screens/home/store/taskstore.dart';
+import 'package:flutter_mobx/flutter_mobx.dart';
 
+final TaskStore taskStore = new TaskStore();
 
-  final Counter counter = new Counter();
-  
 Widget buildBottomBar(context) {
   return BottomAppBar(
       color: Color.fromRGBO(220, 220, 220, 1.0), //cinza fraco background
@@ -14,12 +14,26 @@ Widget buildBottomBar(context) {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
                 Container(
-                  color: Colors.blue,
+                    color: Colors.red,
+                    height: 50,
+                    width: 50,
                     child: IconButton(
-                  icon: Image.asset("assets/icones/search.png"),
-                  onPressed: counter.increment
-                )),
-                Container(child: Image.asset("assets/icones/home.png")),
+                        // iconSize: 30,
+                        icon: Image.asset("assets/icones/search.png"),
+                        onPressed: () {})),
+
+                IconButton(
+                    icon: Image.asset("assets/icones/home.png"),
+                    onPressed: taskStore.increment),
+
+                Container(
+                    color: Colors.blueAccent,
+                    height: 50,
+                    width: 50,
+                    child: Expanded(
+                        child: IconButton(
+                            icon: Image.asset("assets/icones/home.png"),
+                            onPressed: () {}))),
                 // Container(child: Image.asset("assets/icones/settings.png")),
               ])));
 }

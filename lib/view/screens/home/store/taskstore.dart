@@ -1,11 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:mobx/mobx.dart';
-part 'counter.g.dart';
+part 'taskstore.g.dart';
 
-class Counter = _Counter with _$Counter;
+class TaskStore = _TaskStore with _$TaskStore;
 
-abstract class _Counter with Store {
-  int i=0;
+abstract class _TaskStore with Store {
+  int i = 0;
 
   @observable
   ObservableList<String> entries = ObservableList();
@@ -21,8 +21,7 @@ abstract class _Counter with Store {
 
   @action
   void increment() {
-    i++;
-    entries.add(i.toString());
+    entries.add(entries.length.toString());
 
     if (entries.length.isOdd)
       colorCodes.add(Color.fromRGBO(255, 127, 16, 1));
@@ -30,7 +29,8 @@ abstract class _Counter with Store {
       colorCodes.add(Color.fromRGBO(255, 140, 0, 1));
     }
     print('click');
-    title.add('Tarefa: '+i.toString());
-    date.add('18:00');
+    print("Quantidade de Tarefas: " + (entries.length).toString());
+    title.add('Tarefa: ' + entries.length.toString());
+    date.add(DateTime.now().hour.toString()+":"+DateTime.now().minute.toString());
   }
 }

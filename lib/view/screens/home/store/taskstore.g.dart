@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'counter.dart';
+part of 'taskstore.dart';
 
 // **************************************************************************
 // StoreGenerator
@@ -8,8 +8,8 @@ part of 'counter.dart';
 
 // ignore_for_file: non_constant_identifier_names, unnecessary_brace_in_string_interps, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic
 
-mixin _$Counter on _Counter, Store {
-  final _$entriesAtom = Atom(name: '_Counter.entries');
+mixin _$TaskStore on _TaskStore, Store {
+  final _$entriesAtom = Atom(name: '_TaskStore.entries');
 
   @override
   ObservableList<String> get entries {
@@ -24,7 +24,7 @@ mixin _$Counter on _Counter, Store {
     });
   }
 
-  final _$colorCodesAtom = Atom(name: '_Counter.colorCodes');
+  final _$colorCodesAtom = Atom(name: '_TaskStore.colorCodes');
 
   @override
   ObservableList<Color> get colorCodes {
@@ -39,7 +39,7 @@ mixin _$Counter on _Counter, Store {
     });
   }
 
-  final _$titleAtom = Atom(name: '_Counter.title');
+  final _$titleAtom = Atom(name: '_TaskStore.title');
 
   @override
   ObservableList<String> get title {
@@ -54,7 +54,7 @@ mixin _$Counter on _Counter, Store {
     });
   }
 
-  final _$dateAtom = Atom(name: '_Counter.date');
+  final _$dateAtom = Atom(name: '_TaskStore.date');
 
   @override
   ObservableList<String> get date {
@@ -69,16 +69,16 @@ mixin _$Counter on _Counter, Store {
     });
   }
 
-  final _$_CounterActionController = ActionController(name: '_Counter');
+  final _$_TaskStoreActionController = ActionController(name: '_TaskStore');
 
   @override
   void increment() {
     final _$actionInfo =
-        _$_CounterActionController.startAction(name: '_Counter.increment');
+        _$_TaskStoreActionController.startAction(name: '_TaskStore.increment');
     try {
       return super.increment();
     } finally {
-      _$_CounterActionController.endAction(_$actionInfo);
+      _$_TaskStoreActionController.endAction(_$actionInfo);
     }
   }
 
