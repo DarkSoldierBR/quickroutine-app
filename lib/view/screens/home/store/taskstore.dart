@@ -31,6 +31,6 @@ abstract class _TaskStore with Store {
     print('click');
     print("Quantidade de Tarefas: " + (entries.length).toString());
     title.add('Tarefa: ' + entries.length.toString());
-    date.add(DateTime.now().toLocal().hour.toString()+":"+DateTime.now().toLocal().minute.toString());
+    date.add((DateTime.now().hour-3).toString()+":"+DateTime.now().minute.toString());
   }
 }
