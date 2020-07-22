@@ -21,7 +21,8 @@ abstract class _TaskStore with Store {
 
   @action
   void increment() {
-    entries.add(entries.length.toString());
+    i++;
+    entries.add(i.toString());
 
     if (entries.length.isOdd)
       colorCodes.add(Color.fromRGBO(255, 127, 16, 1));
@@ -31,6 +32,8 @@ abstract class _TaskStore with Store {
     print('click');
     print("Quantidade de Tarefas: " + (entries.length).toString());
     title.add('Tarefa: ' + entries.length.toString());
-    date.add((DateTime.now().hour-3).toString()+":"+DateTime.now().minute.toString());
+    date.add((DateTime.now().hour - 3).toString() +
+        ":" +
+        DateTime.now().minute.toString());
   }
 }
