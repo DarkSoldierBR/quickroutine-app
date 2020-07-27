@@ -23,12 +23,14 @@ class _HomeState extends State<Home> {
         bottomNavigationBar: buildBottomBar(context),
         body: Container(
           alignment: Alignment.bottomCenter,
-          color: Color.fromRGBO(220, 220, 220, 1.0), //cinza fraco background
+          color: Colors
+              .red, //Color.fromRGBO(220, 220, 220, 1.0), //cinza fraco background
           child: Column(
             children: <Widget>[
               SizedBox(
                   width: double.infinity,
                   child: Container(
+                    color: Colors.green,
                     height: 60,
                     alignment: Alignment.center,
                     child: Text(
@@ -42,9 +44,11 @@ class _HomeState extends State<Home> {
               Expanded(
                   child: Container(
                 decoration: BoxDecoration(
+                  color: Colors.blue,
                   border: Border.all(
-                      width: 5.0,
-                      color: Color.fromRGBO(128, 128, 128, 1)), //cinza
+                    width: 5.0,
+                    color: Color.fromRGBO(128, 128, 128, 1), //cinza
+                  ),
                   borderRadius: BorderRadius.all(
                     Radius.circular(25),
                   ),
@@ -53,6 +57,7 @@ class _HomeState extends State<Home> {
                 child: Column(
                   children: <Widget>[
                     Container(
+                        color: Colors.yellow,
                         width: 350,
                         height: 40,
                         alignment: Alignment.center,
