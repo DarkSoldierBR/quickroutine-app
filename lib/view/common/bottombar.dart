@@ -14,7 +14,6 @@ Widget buildBottomBar(context) {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
                 Container(
-                    color: Colors.red,
                     height: 50,
                     width: 50,
                     child: IconButton(
@@ -27,13 +26,17 @@ Widget buildBottomBar(context) {
                     onPressed: taskStore.increment),
 
                 Container(
-                    color: Colors.blueAccent,
+                    // color: Colors.blueAccent,
                     height: 50,
                     width: 50,
-                    child: Expanded(
-                        child: IconButton(
-                            icon: Image.asset("assets/icones/home.png"),
-                            onPressed: () {}))),
+                    child: Column(
+                      children: <Widget>[
+                        Expanded(
+                            child: IconButton(
+                                icon: Image.asset("assets/icones/home.png"),
+                                onPressed: () {}))
+                      ],
+                    )),
                 // Container(child: Image.asset("assets/icones/settings.png")),
               ])));
 }
