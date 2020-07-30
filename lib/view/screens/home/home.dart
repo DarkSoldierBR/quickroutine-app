@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:quick_routine/view/common/appbar.dart';
 import 'package:quick_routine/view/common/drawer.dart';
 import 'package:quick_routine/view/common/bottombar.dart';
 import 'package:quick_routine/view/screens/home/widget/task.dart';
+import 'package:quick_routine/view/screens/home/store/taskstore.dart';
+
+final TaskStore taskStore = new TaskStore();
 
 class Home extends StatefulWidget {
   @override
@@ -39,8 +43,9 @@ class _HomeState extends State<Home> {
                   child: Container(
                 decoration: BoxDecoration(
                   border: Border.all(
-                      width: 5.0,
-                      color: Color.fromRGBO(128, 128, 128, 1)), //cinza
+                    width: 5.0,
+                    color: Color.fromRGBO(128, 128, 128, 1), //cinza
+                  ),
                   borderRadius: BorderRadius.all(
                     Radius.circular(25),
                   ),
@@ -62,32 +67,15 @@ class _HomeState extends State<Home> {
                               fontWeight: FontWeight.bold),
                         )),
                     Expanded(
-                        child: Container(
-                            height: 340,
-                            child: ListView(
-                              children: <Widget>[
-                                buildTask("9:00", "Acordar"),
-                                buildTask("10:00", "Estudar"),
-                                buildTask("11:00", "Almoçar"),
-                                buildTask("12:00", "Almoçar"),
-                                buildTask("13:30", "Dormir"),
-                                buildTask("14:00", "Acordar"),
-                                buildTask("15:10", "Estudar"),
-                                buildTask("16:30", "Dormir"),
-                                buildTask("17:00", "Acordar"),
-                                buildTask("18:10", "Estudar"),
-                                buildTask("9:00", "Acordar"),
-                                buildTask("10:00", "Estudar"),
-                                buildTask("11:00", "Almoçar"),
-                                buildTask("12:00", "Almoçar"),
-                                buildTask("13:30", "Dormir"),
-                                buildTask("14:00", "Acordar"),
-                                buildTask("15:10", "Estudar"),
-                                buildTask("16:30", "Dormir"),
-                                buildTask("17:00", "Acordar"),
-                                buildTask("18:10", "Estudar"),
-                              ],
-                            )))
+                        child: Observer(
+                            builder: (context) => ListView.builder(
+                                padding: const EdgeInsets.all(8),
+                                itemCount: taskStore?.entries?.length ?? 0,
+                                itemBuilder: (BuildContext context, int index) {
+                                  return buildTask(context, index, taskStore);
+                                }))),
+                    FloatingActionButton(
+                        onPressed: taskStore.increment, child: Icon(Icons.add)),
                   ],
                 ),
               )),
